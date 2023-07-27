@@ -185,6 +185,14 @@ body {
 
 /* Benefits Section */
 
+.icon {
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background: var(--cloud);
+  padding: 24px 100px;
+}
+
 .benefits {
   display: flex;
   flex-wrap: wrap;
@@ -242,7 +250,6 @@ body {
 }
 
 /* Team Section */
-
 .team {
   display: flex;
   flex-wrap: wrap;
@@ -283,6 +290,27 @@ body {
 
 .bg-team {
   background-color: var(--cloud);
+}
+
+.team-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.team-social-item {
+  background-color: var(--iris);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.icon-item {
+  width: 16px;
+  height: 16px;
+  justify-content: center;
 }
 
 /* Buttons Sections */
