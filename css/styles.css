@@ -8,6 +8,7 @@
   --slate: #434455;
   --white: #fff;
   --lightslate: #8e8f99;
+  --social-hover: #31d0aa;
   --button-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px, 2px, 2px rgba(0, 0, 0, 0.12);
@@ -155,7 +156,7 @@ body {
   text-align: center;
 }
 
-.bg-hero {
+.hero {
   background-color: var(--navyblue);
 }
 
@@ -186,7 +187,7 @@ body {
 
 /* Benefits Section */
 
-.benefits-icon {
+.icon .benefits-icon {
   border-radius: 4px;
   width: 264px;
   height: 112px;
@@ -293,18 +294,18 @@ body {
   background-color: var(--cloud);
 }
 
-.team-social-list {
+.social-team {
   display: flex;
   justify-content: center;
   gap: 24px;
   padding-top: 8px;
 }
 
-.team-social-item {
+.icon-item {
   width: 40px;
   height: 40px;
 }
-.team-social-link {
+.social-team .link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -317,28 +318,37 @@ body {
   color: var(--iris);
 }
 
-/* Customer Section */
-.bg-customer {
-  background-color: var(--white);
-  margin-top: 140px;
+.social-team .link:hover,
+.social-team .link:focus {
+  background-color: var(--social-hover);
 }
-.customers-logo {
+
+/* Customer Section */
+
+.partners .icon {
   width: 168px;
   height: 88px;
   padding: 16px 32px;
-  margin-bottom: 140px;
   margin-top: 20px;
+
+  fill: var(--lightslate);
 
   border-radius: 4px;
   border: 1px solid var(--lightslate);
 }
-.customers {
+
+.partners .icon:hover,
+.partners .icon:focus {
+  fill: var(--ocean);
+}
+
+.partners {
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
   margin-top: -30px;
 }
-.customers-item {
+.partners .item {
   flex-basis: calc(100% / 6 -30px);
   margin-left: 30px;
   margin-top: 30px;
@@ -429,7 +439,7 @@ body {
   margin-bottom: 20px;
 }
 
-.page-footer.bg-footer {
+.page-footer {
   background-color: var(--navyblue);
 }
 
@@ -445,24 +455,24 @@ body {
   padding-top: 17px;
 }
 
-.social-list-description {
+.footer-heading {
   color: var(--white);
   font-weight: 400;
   font-size: 16px;
   margin-left: 120px;
 }
 
-.footer-social-list {
+.social-footer {
   gap: 16px;
   padding-top: 8px;
 }
 
-.footer-social-item {
+.icon-item {
   width: 40px;
   height: 40px;
 }
 
-.footer-social-link {
+.icon-item .link {
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -481,11 +491,11 @@ body {
   border-radius: 50%;
 }
 
-.page-footer .container {
+.page-footer .footer {
   display: flex;
 }
 
-.footer-social-list {
+.social-footer {
   display: flex;
   justify-content: center;
   margin-left: 120px;
