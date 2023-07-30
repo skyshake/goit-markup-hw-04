@@ -159,15 +159,15 @@ body {
 
 .hero {
   background-image: linear-gradient(
-      rgba(25, 28, 38, 0.2),
-      rgba(25, 28, 38, 0.2)
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url(../images/hw1/hero-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  background: var(--grey);
+  background-color: var(--navyblue);
 }
 
 .hero-title {
