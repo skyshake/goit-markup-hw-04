@@ -10,7 +10,6 @@
   --lightslate: #8e8f99;
   --social-hover: #31d0aa;
   --grey: rgba(46, 47, 66, 0.7);
-  --dairy: #fcfcfc;
   --button-primary: 0px 4px 4px rgba(0, 0, 0, 0.15);
   --project-cards-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -101,36 +100,10 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 31px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.nav-menu .page:hover,
-.nav-menu .page:focus,
-.nav-menu .page.current,
-.contacts-menu .contact:hover,
-.contacts-menu .contact:focus {
-  color: var(--iris);
 }
 
 .nav-menu {
   margin-left: 93px;
-}
-
-.current {
-  position: relative;
-  color: var(--ocean);
-}
-
-.current::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0px;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  border: 2px solid var(--ocean);
-  background-color: var(--ocean);
 }
 
 .contacts-menu {
@@ -140,6 +113,14 @@ body {
 .nav-menu .item:not(:last-child),
 .contacts-menu .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.nav-menu .page:hover,
+.nav-menu .page:focus,
+.nav-menu .page.current,
+.contacts-menu .contact:hover,
+.contacts-menu .contact:focus {
+  color: var(--iris);
 }
 
 .contacts-menu .contact {
@@ -206,8 +187,6 @@ body {
   letter-spacing: 0.06em;
   padding: 10px 32px;
   box-shadow: var(--button-primary);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.primary:hover,
@@ -353,8 +332,6 @@ body {
 
   background-color: var(--iris);
   color: var(--iris);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-team .link:hover,
@@ -374,9 +351,6 @@ body {
 
   border-radius: 4px;
   border: 1px solid var(--lightslate);
-
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .partners .icon:hover,
@@ -425,10 +399,6 @@ body {
   font-weight: 500;
   line-height: 1.62;
   padding: 6px 22px;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button.filter:hover,
@@ -459,8 +429,6 @@ body {
   border: 1px solid #eeeeee;
   border-top: 0;
   background-color: var(--white);
-
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-card .substrate:hover,
@@ -481,31 +449,6 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
-}
-
-.project-cover-wrap {
-  position: relative;
-  overflow: hidden;
-}
-
-.project-cover-text {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  padding: 40px 32px 164px 32px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-  color: var(--cloud);
-  background-color: var(--iris);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover .project-cover-text {
-  transform: translateY(0);
 }
 
 /* FOOTER*/
@@ -567,13 +510,6 @@ body {
 
   background-color: var(--iris);
   color: var(--iris);
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.social-footer .link:hover,
-.social-footer .link:focus {
-  background-color: var(--social-hover);
 }
 
 .footer-social-link {
@@ -589,69 +525,7 @@ body {
   gap: 16px;
 }
 
-/* Modal Window */
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 408px;
-  min-height: 584px;
-  background-color: var(--dairy);
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
-}
-
-.modal-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 0px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 30px;
-  height: 30px;
-
-  background-color: var(--cornflower);
-  color: var(--navyblue);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  cursor: pointer;
-
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-close:hover,
-.modal-close:focus {
-  background-color: var(--ocean);
-  color: var(--cloud);
-}
-
-.modal-close-icon {
-  fill: currentColor;
-}
-
-.is-hidden {
-  visibility: none;
-  opacity: 0;
-  pointer-events: none;
+.social-footer .link:hover,
+.social-footer .link:focus {
+  background-color: var(--social-hover);
 }
