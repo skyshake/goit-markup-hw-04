@@ -336,7 +336,7 @@ body {
 
 .social-team .link:hover,
 .social-team .link:focus {
-  background-color: var(--social-hover);
+  background-color: var(--ocean);
 }
 
 /* Customer Section */
